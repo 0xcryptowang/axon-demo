@@ -1,3 +1,4 @@
+/*
 package com.winstar.coreapi
 
 import org.axonframework.commandhandling.TargetAggregateIdentifier
@@ -9,3 +10,4 @@ class WithDepositMoneyCommand(@TargetAggregateIdentifier val accountId: String, 
 class AccountCreatedEvent(val accountId: String, val overDraftLimit: Int)
 class MoneyWithDrawnEvent(val accountId: String, val amount: Int, val balance: Int)
 class MoneyWithDepositEvent(val accountId: String, val amount: Int, val balance: Int)
+*/

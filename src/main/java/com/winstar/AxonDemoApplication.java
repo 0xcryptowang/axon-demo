@@ -3,10 +3,7 @@ package com.winstar;
 import com.winstar.coreapi.CreateAccountCommand;
 import com.winstar.coreapi.WithDepositMoneyCommand;
 import com.winstar.coreapi.WithDrawMoneyCommand;
-import org.axonframework.commandhandling.AsynchronousCommandBus;
-import org.axonframework.commandhandling.CommandBus;
-import org.axonframework.commandhandling.CommandCallback;
-import org.axonframework.commandhandling.CommandMessage;
+import org.axonframework.commandhandling.*;
 import org.axonframework.eventsourcing.eventstore.EventStorageEngine;
 import org.axonframework.eventsourcing.eventstore.inmemory.InMemoryEventStorageEngine;
 import org.axonframework.spring.config.EnableAxonAutoConfiguration;
@@ -46,6 +43,6 @@ public class AxonDemoApplication {
 
     @Bean
     public CommandBus commandBus() {
-        return new AsynchronousCommandBus();
+        return new SimpleCommandBus();
     }
 }
